@@ -3,10 +3,9 @@
 
 #------ 患者番号一覧取得
 
-require 'pp'
+
 require 'crack' # for xml and json
 require 'crack/xml' # for just xml
-
 require 'uri'
 require 'net/http'
 
