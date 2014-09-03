@@ -22,18 +22,30 @@ req = Net::HTTP::Post.new("/api01rv2/patientlst1v2?class=01")
 # class :02 新規対象
 #
 #
+  print"開始日を入力してください(例：2011-01-01):"
+  start_d = gets.chop
+  print"終了日を入力してください(例：2011-01-01):"
+  end_d   = gets.chop
 BODY = <<EOF
+
+
 
 <data>
   <patientlst1req type="record">
-  <Base_StartDate type="string">2012-06-01</Base_StartDate>
-  <Base_EndDate type="string">2014-09-30</Base_EndDate>
+  
+  <Base_StartDate type="string">#{start_d}</Base_StartDate>
+  <Base_EndDate type="string">#{end_d}</Base_EndDate>
+
   <Contain_TestPatient_Flag type="string">1</Contain_TestPatient_Flag>
   </patientlst1req>
 </data>
 EOF
 
 def list_patient(body)
+
+
+    
+  
   puts "----------------------------"
   root = Crack::XML.parse(body)
 
@@ -62,7 +74,7 @@ def list_patient(body)
 	puts patient["CreateDate"]
 	print"  更新日　|"
 	puts patient["UpdateDate"]
-	puts "--------------------------"
+	puts "--------------------------"	
   end
 end
 
@@ -76,7 +88,6 @@ Net::HTTP.start(HOST, PORT) {|http|
   res = http.request(req)
   #puts res.code
   #puts res.body
-
   list_patient(res.body)
   
 
