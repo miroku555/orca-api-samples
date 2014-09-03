@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmlio2>
+  <patientlst1res type="record">
+    <Information_Date type="string">2014-09-02</Information_Date>
+    <Information_Time type="string">09:42:41</Information_Time>
+    <Api_Result type="string">00</Api_Result>
+    <Api_Result_Message type="string">処理終了</Api_Result_Message>
+    <Reskey type="string">Patient Info</Reskey>
+    <Target_Patient_Count type="string">0004</Target_Patient_Count>
+    <Patient_Information type="array">
+
+      <Patient_Information_child type="record">
+        <Patient_ID type="string">00001</Patient_ID>
+        <WholeName type="string">常松菜摘</WholeName>
+        <WholeName_inKana type="string">ツネマツナツミ</WholeName_inKana>
+        <BirthDate type="string">1993-09-27</BirthDate>
+        <Sex type="string">2</Sex>
+        <CreateDate type="string">2014-08-27</CreateDate>
+        <UpdateDate type="string">2014-08-27</UpdateDate>
+        <TestPatient_Flag type="string">0</TestPatient_Flag>
+      </Patient_Information_child>
+
+      <Patient_Information_child type="record">
+        <Patient_ID type="string">00005</Patient_ID>
+        <WholeName type="string">テスト　太郎</WholeName>
+        <WholeName_inKana type="string">テスト　タロウ</WholeName_inKana>
+        <BirthDate type="string">1975-05-01</BirthDate>
+        <Sex type="string">1</Sex>
+        <CreateDate type="string">2014-08-28</CreateDate>
+        <UpdateDate type="string">2014-08-28</UpdateDate>
+        <TestPatient_Flag type="string">0</TestPatient_Flag>
+      </Patient_Information_child>
+
+      <Patient_Information_child type="record">
+        <Patient_ID type="string">00006</Patient_ID>
+        <WholeName type="string">常松　咲来</WholeName>
+        <WholeName_inKana type="string">ツネマツ　サクラ</WholeName_inKana>
+        <BirthDate type="string">1993-03-29</BirthDate>
+        <Sex type="string">2</Sex>
+        <CreateDate type="string">2014-08-28</CreateDate>
+        <UpdateDate type="string">2014-08-28</UpdateDate>
+        <TestPatient_Flag type="string">0</TestPatient_Flag>
+      </Patient_Information_child>
+
+      <Patient_Information_child type="record">
+        <Patient_ID type="string">00007</Patient_ID>
+        <WholeName type="string">石川　寛</WholeName>
+        <WholeName_inKana type="string">イシカワ　ヒロシ</WholeName_inKana>
+        <BirthDate type="string">1993-03-03</BirthDate>
+        <Sex type="string">1</Sex>
+        <CreateDate type="string">2014-08-28</CreateDate>
+        <UpdateDate type="string">2014-08-28</UpdateDate>
+        <TestPatient_Flag type="string">0</TestPatient_Flag>
+      </Patient_Information_child>
+
+    </Patient_Information>
+  </patientlst1res>
+</xmlio2>

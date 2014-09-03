@@ -52,24 +52,24 @@ def list_patient(body)
   #end
   pinfo = root["xmlio2"]["patientlst1res"]["Patient_Information"]
   pinfo.each do |patient|
-    print"    ID    |"
-    puts patient["Patient_ID"]
-	print"   名前   |"
-    puts patient["WholeName"]
-	print"   カナ　 |"
-	puts patient["WholeName_inKana"]
-	print" 生年月日 |"
-	puts patient["BirthDate"]
-	print"   性別 　|"
+        print patient["Patient_ID"]
+        print" "
+	print patient["WholeName"]
+print" "	
+print patient["WholeName_inKana"]
+print" "	
+print patient["BirthDate"]
+print" "	
+print 
 	if patient["Sex"] == "1"
-	  puts "男"
+	  puts "1"
 	else
-	  puts "女"
+	  puts "2"
 	end
-	print"  作成日　|"
-	puts patient["CreateDate"]
-	print"  更新日　|"
-	puts patient["UpdateDate"]
+#	print"  作成日　|"
+#	puts patient["CreateDate"]
+#	print"  更新日　|"
+#	puts patient["UpdateDate"]
 	puts "--------------------------"	
   end
 end
