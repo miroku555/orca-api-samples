@@ -22,10 +22,6 @@ req = Net::HTTP::Post.new("/api01rv2/patientlst1v2?class=01")
 # class :02 新規対象
 #
 #
-  print"開始日を入力してください(例：2011-01-01):"
-  start_d = gets.chop
-  print"終了日を入力してください(例：2011-01-01):"
-  end_d   = gets.chop
 BODY = <<EOF
 
 
@@ -33,8 +29,8 @@ BODY = <<EOF
 <data>
   <patientlst1req type="record">
   
-  <Base_StartDate type="string">#{start_d}</Base_StartDate>
-  <Base_EndDate type="string">#{end_d}</Base_EndDate>
+  <Base_StartDate type="string">#{ARGV[0]}</Base_StartDate>
+  <Base_EndDate type="string">#{ARGV[1]}</Base_EndDate>
 
   <Contain_TestPatient_Flag type="string">1</Contain_TestPatient_Flag>
   </patientlst1req>
